@@ -1,19 +1,57 @@
 <html>
     <head>
         <title>Django Girls blog</title>
+        <style>
+            body{
+                background-image: url('https://djangogirls.org/static/img/global/donate/lagos.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            div{
+                background-color: skyblue;
+            }
+            h1{
+                color: red;
+                text-align: center;
+                font-size: 45px;
+            }
+            h2{
+                color: black;
+                text-align: center;
+                font-size: 30px;
+            }
+            .post{
+                border-style: solid;
+                border-radius: 8px;
+                border-color: brown;
+            }
+            .date{
+                text-align: left;
+                font-size: 15px;
+                color: black;
+            }
+            .text{
+                
+                font-size: 25px;
+                color: aliceblue;
+                
+            }
+        </style>
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1>Django Girls Blog</h1>
         </div>
 
         {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
 
+        <div class=post>
+            <h2>{{ post.title }}</h2>
+            <p class=date>published: {{ post.published_date }}</p>
+            <p class=text>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+    
     </body>
 </html>
