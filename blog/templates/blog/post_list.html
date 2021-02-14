@@ -3,18 +3,17 @@
         <title>Django Girls blog</title>
         <style>
             body{
-                background-image: url('https://djangogirls.org/static/img/global/donate/lagos.jpg');
+                background-image: url('https://miro.medium.com/max/1000/1*czRJ6n4y6sXGWmaRwfsVow.jpeg');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
             }
-            div{
-                background-color: skyblue;
-            }
+            
             h1{
-                color: red;
+                color: white;
                 text-align: center;
                 font-size: 45px;
+                
             }
             h2{
                 color: black;
@@ -22,6 +21,7 @@
                 font-size: 30px;
             }
             .post{
+                background-color: skyblue;
                 border-style: solid;
                 border-radius: 8px;
                 border-color: brown;
@@ -34,7 +34,7 @@
             .text{
                 
                 font-size: 25px;
-                color: aliceblue;
+                color: white;
                 
             }
         </style>
@@ -51,7 +51,14 @@
             <p class=date>published: {{ post.published_date }}</p>
             <p class=text>{{ post.text|linebreaksbr }}</p>
         </div>
+        <br>
         {% endfor %}
+
+        <div class=post>
+            <h2>My second post</h2>
+            <p class=date>published: 14.02.2021, 7:14 p.m.</p>
+            <p class=text>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>
     
     </body>
 </html>
